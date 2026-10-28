@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html><html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClearBooks Solutions - Professional Bookkeeping Services</title>
+    <title>Johnny Laim Bookkeeping — Catch Up, Clean Up, Keep Current</title>
+    <meta name="description" content="Small-business bookkeeping in Burlingame, CA — local & remote. I help you catch up the backlog, clean up the mess, and keep your books current.">
+    <meta property="og:title" content="Johnny Laim Bookkeeping — Catch Up, Clean Up, Keep Current">
+    <meta property="og:description" content="Small-business bookkeeping in Burlingame, CA — local & remote. I help you catch up the backlog, clean up the mess, and keep your books current.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         * {
             margin: 0;
@@ -21,27 +27,29 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
             color: var(--gray-dark);
             background: var(--white);
         }
 
         header {
-            background: var(--navy);
+            background: rgba(26, 41, 66, 0.88);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
             color: var(--white);
             padding: 1rem 2rem;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
         }
 
         header .container {
             max-width: 1200px;
             margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
             align-items: center;
         }
 
@@ -49,12 +57,20 @@
             font-size: 1.5rem;
             font-weight: 600;
             letter-spacing: -0.5px;
+            grid-column: 2;
+            text-align: center;
+        }
+
+        header nav {
+            grid-column: 3;
+            justify-self: end;
+            white-space: nowrap;
         }
 
         nav a {
             color: var(--white);
             text-decoration: none;
-            margin-left: 2rem;
+            margin-left: 1.4rem;
             font-size: 0.95rem;
             transition: color 0.3s ease;
         }
@@ -69,11 +85,44 @@
             padding: 0 2rem;
         }
 
+        /* Modern type pairing */
+        h1, h2, h3, .logo {
+            font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+            letter-spacing: -0.5px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
+            color: var(--white);
+            background: rgba(14, 165, 168, 0.16);
+            border: 1px solid rgba(14, 165, 168, 0.5);
+            padding: 0.55rem 1.4rem;
+            border-radius: 50px;
+            margin-bottom: 1.75rem;
+        }
+
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--navy) 0%, #0f1f35 100%);
+            background:
+                radial-gradient(ellipse 55% 45% at 18% 15%, rgba(14, 165, 168, 0.16), transparent 70%),
+                radial-gradient(ellipse 45% 40% at 85% 85%, rgba(14, 165, 168, 0.1), transparent 70%),
+                linear-gradient(135deg, var(--navy) 0%, #0f1f35 100%);
             color: var(--white);
-            padding: 6rem 2rem;
+            padding: 7rem 2rem;
             text-align: center;
         }
 
@@ -82,10 +131,11 @@
         }
 
         .hero h1 {
-            font-size: 3rem;
-            line-height: 1.2;
+            font-size: 3.4rem;
+            line-height: 1.15;
             margin-bottom: 1.5rem;
             font-weight: 600;
+            letter-spacing: -1px;
         }
 
         .hero p {
@@ -97,21 +147,22 @@
 
         .cta-button {
             display: inline-block;
-            background: var(--teal);
+            background: linear-gradient(135deg, var(--teal) 0%, #0b8f92 100%);
             color: var(--white);
-            padding: 1rem 2.5rem;
-            border-radius: 6px;
+            padding: 1rem 2.75rem;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             font-size: 1rem;
-            transition: background 0.3s ease, transform 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.3s ease;
             border: none;
             cursor: pointer;
+            box-shadow: 0 4px 16px rgba(14, 165, 168, 0.35);
         }
 
         .cta-button:hover {
-            background: #0d8e91;
             transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(14, 165, 168, 0.45);
         }
 
         .cta-button-secondary {
@@ -127,7 +178,7 @@
 
         /* Section Styling */
         section {
-            padding: 5rem 2rem;
+            padding: 6rem 2rem;
         }
 
         section h2 {
@@ -158,23 +209,39 @@
 
         .service-card {
             background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--teal);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+            padding: 2.25rem;
+            border-radius: 16px;
+            border: 1px solid rgba(14, 165, 168, 0.14);
+            border-top: 3px solid var(--teal);
+            box-shadow: 0 2px 16px rgba(26, 41, 66, 0.06);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transform: translateY(-6px);
+            box-shadow: 0 12px 32px rgba(26, 41, 66, 0.12);
         }
 
         .service-card h3 {
             font-size: 1.4rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             color: var(--navy);
             font-weight: 600;
+        }
+
+        .service-price {
+            font-size: 1.05rem;
+            color: var(--teal);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .card-note {
+            font-size: 0.9rem;
+            color: var(--gray-med);
+            margin-top: 0.5rem;
+            padding-top: 1rem;
+            border-top: 1px dashed #e5e7eb;
         }
 
         .service-card p {
@@ -216,7 +283,7 @@
         .step {
             text-align: center;
             padding: 2rem;
-            border-radius: 8px;
+            border-radius: 16px;
             background: var(--gray-light);
         }
 
@@ -279,7 +346,6 @@
         }
 
         .credentials h4 {
-            font-size: 0.95rem;
             color: var(--navy);
             margin-bottom: 0.5rem;
             font-weight: 600;
@@ -306,14 +372,19 @@
         .about-image {
             background: var(--white);
             border-radius: 8px;
-            padding: 2rem;
-            text-align: center;
+            padding: 0;
+            overflow: hidden;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             min-height: 300px;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--gray-med);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* Testimonials Section */
@@ -360,6 +431,83 @@
             font-size: 0.95rem;
         }
 
+        /* Pull Quote */
+        .pull-quote {
+            background: var(--navy);
+            padding: 4.5rem 2rem;
+            text-align: center;
+        }
+
+        .pull-quote blockquote {
+            font-size: 2rem;
+            font-style: italic;
+            line-height: 1.4;
+            color: var(--white);
+            font-weight: 600;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pull-quote blockquote:before {
+            content: "\201C";
+            display: block;
+            font-size: 4rem;
+            color: var(--teal);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .pull-quote cite {
+            display: block;
+            margin-top: 1.5rem;
+            font-style: normal;
+            color: var(--teal);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* Service Icons */
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Why Me */
+        .why-me {
+            background: var(--white);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .why-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .why-item .why-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .why-item h3 {
+            font-size: 1.1rem;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .why-item p {
+            color: var(--gray-med);
+            font-size: 0.95rem;
+        }
+
         /* CTA Section */
         .cta-section {
             background: var(--navy);
@@ -380,6 +528,38 @@
             opacity: 0.95;
         }
 
+        .cta-section a.phone-link {
+            color: var(--white);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .cta-section a.phone-link:hover {
+            color: var(--teal);
+        }
+
+        .trust-note {
+            max-width: 640px;
+            margin: 0 auto 2rem;
+            font-size: 0.95rem !important;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Brand band */
+        .brand-band {
+            background: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid #eef2f6;
+        }
+
+        .brand-band img {
+            max-width: 230px;
+            width: 60%;
+            height: auto;
+            display: inline-block;
+        }
+
         /* Footer */
         footer {
             background: #0f1f35;
@@ -390,10 +570,117 @@
             opacity: 0.9;
         }
 
+        /* Hero buttons + trust strip */
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1.75rem;
+        }
+
+        .trust-strip {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.75);
+            letter-spacing: 0.3px;
+        }
+
+        .trust-strip span {
+            color: var(--teal);
+            margin: 0 0.5rem;
+        }
+
+        /* Stats band */
+        .stats-band {
+            background: var(--white);
+            border-bottom: 1px solid #eef2f6;
+            padding: 3rem 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: var(--gray-med);
+            max-width: 220px;
+            margin: 0 auto;
+        }
+
+        /* FAQ */
+        .faq {
+            background: var(--gray-light);
+        }
+
+        .faq-list {
+            max-width: 760px;
+            margin: 3rem auto 0;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border: 1px solid rgba(14, 165, 168, 0.14);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            padding: 1.25rem 1.5rem;
+            font-weight: 600;
+            color: var(--navy);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item summary::after {
+            content: "+";
+            color: var(--teal);
+            font-size: 1.5rem;
+            font-weight: 400;
+            flex-shrink: 0;
+            line-height: 1;
+        }
+
+        .faq-item[open] summary::after {
+            content: "\2013";
+        }
+
+        .faq-item p {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--gray-med);
+            line-height: 1.7;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             nav {
                 display: none;
+            }
+
+            .logo {
+                font-size: 1.15rem;
             }
 
             .hero h1 {
@@ -422,11 +709,12 @@
     <!-- Header -->
     <header>
         <div class="container">
-            <div class="logo">ClearBooks Solutions</div>
+            <div class="logo">Johnny Laim Bookkeeping</div>
             <nav>
                 <a href="#services">Services</a>
                 <a href="#process">How It Works</a>
                 <a href="#about">About</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </nav>
         </div>
@@ -435,53 +723,89 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Precise Bookkeeping for Growing Businesses</h1>
-            <p>Clean records. Accurate insights. Professional support. No shortcuts.</p>
-            <a href="#contact" class="cta-button">Schedule a Consultation</a>
+            <span class="hero-badge">Bookkeeping for small businesses</span>
+            <h1>Catch Up. Clean Up. Keep Current.</h1>
+            <p>If your books are months behind and just thinking about them makes your stomach drop — I can fix that. Ten years of pharmacy precision behind every number.</p>
+            <div class="hero-buttons">
+                <a href="https://calendly.com/johnnylaim/15-minute-discovery-call" target="_blank" rel="noopener" class="cta-button">Book a Free Discovery Call</a>
+                <a href="#services" class="cta-button cta-button-secondary">See Services &amp; Pricing</a>
+            </div>
+            <div class="trust-strip">Free consultation <span>·</span> No minimums <span>·</span> Burlingame, CA &amp; remote</div>
         </div>
     </section>
+
+    <!-- Stats Band -->
+    <div class="stats-band">
+        <div class="container stats-grid">
+            <div class="stat">
+                <div class="stat-number">10</div>
+                <div class="stat-label">years of precision work in pharmacy</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">7</div>
+                <div class="stat-label">years running a pharmacy as manager</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">4</div>
+                <div class="stat-label">Intuit certifications held</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">1</div>
+                <div class="stat-label">person who touches your books — always me</div>
+            </div>
+        </div>
+    </div>
 
     <!-- Services Section -->
     <section id="services" class="services">
         <div class="container">
-            <h2>Our Services</h2>
-            <p class="subtitle">Tailored bookkeeping solutions for where your business is right now</p>
-            
-            <div class="services-grid">
-                <!-- Clean Up -->
-                <div class="service-card">
-                    <h3>Clean Up</h3>
-                    <p>Got a mess in your books? We'll organize and correct your financial records from the ground up.</p>
-                    <ul>
-                        <li>Fix past accounting errors</li>
-                        <li>Organize expense categories</li>
-                        <li>Reconcile accounts</li>
-                        <li>Prepare accurate financials</li>
-                    </ul>
-                </div>
+            <span class="eyebrow">Services</span>
+            <h2>My Services</h2>
+            <p class="subtitle">Three ways I help — pick the one that matches where your books are right now</p>
 
+            <div class="services-grid">
                 <!-- Catch Up -->
                 <div class="service-card">
+                    <span class="service-icon">📥</span>
                     <h3>Catch Up</h3>
-                    <p>Behind on bookkeeping? We'll bring your records up to date quickly and accurately.</p>
+                    <div class="service-price">$250 for each month of backlog · no minimum</div>
+                    <p>Overdue books brought current: uncategorized transactions, missing records, piled-up statements — all organized and reconciled. Only a month or two behind? We'll get you current and roll you straight into a monthly plan.</p>
                     <ul>
                         <li>Process backlog of transactions</li>
                         <li>Update all accounts</li>
                         <li>Create current financial statements</li>
-                        <li>Prepare for next phase</li>
                     </ul>
+                    <p class="card-note">Starting from zero? New-business setup is a flat $750.</p>
                 </div>
 
-                <!-- Monthly -->
+                <!-- Clean Up -->
                 <div class="service-card">
-                    <h3>Monthly Bookkeeping</h3>
-                    <p>Stay on top of your finances with ongoing professional bookkeeping and support.</p>
+                    <span class="service-icon">🧹</span>
+                    <h3>Clean Up</h3>
+                    <div class="service-price">Three fixed tiers — Light $800 · Full $1,500 · Deep $2,500</div>
+                    <p>Full review and reset: miscategorized transactions, duplicates, unreconciled accounts — found and fixed. A decade of spotting what doesn't belong.</p>
+                    <ul>
+                        <li>Fix past accounting errors</li>
+                        <li>Organize expense categories</li>
+                        <li>Reconcile every account</li>
+                        <li>Prepare accurate financials</li>
+                    </ul>
+                    <p class="card-note">Tiered by account count: 1–2 accounts → Light, 3–5 → Full, 5+ → Deep. A free books review sets your tier.</p>
+                </div>
+
+                <!-- Keep Current -->
+                <div class="service-card">
+                    <span class="service-icon">📊</span>
+                    <h3>Keep Current</h3>
+                    <div class="service-price">$400 / $550 / $700+ per month, by monthly transaction volume</div>
+                    <p>Monthly bookkeeping: transactions categorized, accounts reconciled, reports delivered. You know where you stand — without touching the books.</p>
                     <ul>
                         <li>Transaction entry and reconciliation</li>
                         <li>Monthly financial reporting</li>
-                        <li>Account reconciliation</li>
-                        <li>Ongoing business consultation</li>
+                        <li>Clean, organized records</li>
+                        <li>Ongoing support as you grow</li>
                     </ul>
+                    <p class="card-note">Tiered by monthly transaction volume: up to 100 transactions → $400, up to 300 → $550, 300+ → $700+.</p>
                 </div>
             </div>
         </div>
@@ -490,29 +814,30 @@
     <!-- Process Section -->
     <section id="process" class="process">
         <div class="container">
+            <span class="eyebrow">Process</span>
             <h2>How It Works</h2>
             <p class="subtitle">A straightforward path from chaos to clarity</p>
-            
+
             <div class="process-steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3>Consultation</h3>
-                    <p>We meet to understand your business, current situation, and goals. No obligation.</p>
+                    <h3>Free Consultation</h3>
+                    <p>I'll meet with you to understand your business, your current situation, and your goals. No obligation — and I'll give you an honest read on where your books stand.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
                     <h3>Assessment</h3>
-                    <p>We review your records and prepare a clear proposal with investment and timeline.</p>
+                    <p>I'll review your records and prepare a clear proposal with pricing and timeline. You'll know exactly what it costs before anything starts.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
                     <h3>Implementation</h3>
-                    <p>We get to work on your bookkeeping with clear communication every step of the way.</p>
+                    <p>I get to work on your bookkeeping with clear communication every step of the way. You'll always know what's happening with your numbers.</p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
                     <h3>Support</h3>
-                    <p>You get regular reporting, ongoing updates, and a trusted advisor for your business finances.</p>
+                    <p>You get regular reporting, ongoing updates, and a real person who sweats the details of your business finances.</p>
                 </div>
             </div>
         </div>
@@ -521,45 +846,103 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About ClearBooks Solutions</h2>
-            
+            <span class="eyebrow">About</span>
+            <h2>About Me</h2>
+
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Precision and discipline in every record</h3>
-                    <p>ClearBooks Solutions is built on a foundation of precision, accuracy, and professional expertise. I bring the same discipline and attention to detail that defines successful business operations to your bookkeeping.</p>
-                    <p>With a background in healthcare and a deep commitment to continuous learning, I approach your financial records with the care they deserve—no shortcuts, no guessing, just solid bookkeeping.</p>
-                    
+                    <h3>A bookkeeper trained by a decade in pharmacy</h3>
+                    <p>I'm Johnny — a bookkeeper in Burlingame, CA, working with small businesses locally and remotely. For 10 years I've been a pharmacist, 7 of them running the pharmacy as manager: counting controlled substances to the tablet under DEA rules, verifying doses where a misplaced decimal could hurt someone, and explaining complex regimens in plain English.</p>
+                    <p>Now I bring that same discipline to small business finances. I help you catch up the backlog, clean up the mess, and keep your books current — every transaction categorized, every account reconciled, every report you can trust.</p>
+                    <p>I'm new as a firm, but not new to precision work — and with me, you always get the founder, never a junior.</p>
+
                     <div class="credentials">
-                        <h4>Certifications & Credentials</h4>
-                        <div class="credential-item">Intuit Bookkeeping Certificate</div>
-                        <div class="credential-item">QuickBooks Online ProAdvisor (Level 1 & 2)</div>
-                        <div class="credential-item">Professional liability insured</div>
-                        <div class="credential-item">Bookkeeper in training for NACPB certification</div>
+                        <h4>Certifications &amp; Credentials</h4>
+                        <div class="credential-item">Intuit Bookkeeping Certification (Aug 2026)</div>
+                        <div class="credential-item">Intuit QuickBooks Certification, Level 1 &amp; 2 (through Jul 2027)</div>
+                        <div class="credential-item">Client Advisory Services Foundations (Sep 2026)</div>
                     </div>
                 </div>
 
                 <div class="about-image">
-                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                        <p style="text-align: center; color: var(--gray-med);">
-                            Your professional headshot here<br>
-                            <span style="font-size: 0.85rem; margin-top: 0.5rem; display: block;">High-quality business photo recommended</span>
-                        </p>
-                    </div>
+                    <img src="headshot.jpg" alt="Johnny Laim, bookkeeper in Burlingame, CA">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
+    <!-- Pull Quote -->
+    <section class="pull-quote">
         <div class="container">
-            <h2>What Clients Say</h2>
-            <p class="subtitle">Real feedback from businesses we've helped</p>
-            
-            <div class="testimonials-container">
-                <div class="testimonial-placeholder">
-                    <p>Client testimonials coming soon. As ClearBooks Solutions grows, we'll share the stories of businesses we've helped get their finances in order.</p>
+            <blockquote>In pharmacy, a misplaced decimal can hurt someone. I bring that same precision to your books.</blockquote>
+            <cite>— Johnny Laim</cite>
+        </div>
+    </section>
+
+    <!-- Why Work With Me -->
+    <section id="why-me" class="why-me">
+        <div class="container">
+            <span class="eyebrow">Why Me</span>
+            <h2>Why Work With Me</h2>
+            <p class="subtitle">Why a pharmacist makes a great bookkeeper</p>
+
+            <div class="why-grid">
+                <div class="why-item">
+                    <span class="why-icon">🎯</span>
+                    <h3>Precision as a habit</h3>
+                    <p>Ten years counting controlled substances to the tablet under DEA rules. I don't do "close enough."</p>
                 </div>
+                <div class="why-item">
+                    <span class="why-icon">👤</span>
+                    <h3>You always talk to me</h3>
+                    <p>Solo practice: I'm the one who does your books and answers your questions. No handoffs, no ticket queue.</p>
+                </div>
+                <div class="why-item">
+                    <span class="why-icon">💬</span>
+                    <h3>Honest pricing up front</h3>
+                    <p>You see my prices before anything starts, and the first conversation is free. No surprises.</p>
+                </div>
+                <div class="why-item">
+                    <span class="why-icon">🔍</span>
+                    <h3>Reports in plain English</h3>
+                    <p>Ten years explaining complex medication regimens to patients. Your financials will actually make sense.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <span class="eyebrow">FAQ</span>
+            <h2>Questions, Answered</h2>
+            <p class="subtitle">The things people usually ask before the first call</p>
+
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>My books are a total mess. Is that a problem?</summary>
+                    <p>That's exactly what the Clean Up service is for — miscategorized transactions, duplicates, unreconciled accounts, all of it. I've spent a decade finding what doesn't belong. Bring me the mess; I'll bring the order.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Do you work remotely?</summary>
+                    <p>Yes. I'm based in Burlingame, CA and work with clients locally and fully remote. Everything happens over secure screen-share and email — you never need to leave your office.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How much will it cost?</summary>
+                    <p>My pricing is right here on this page: Catch Up is $250 per month of backlog with no minimum, Clean Up is one of three fixed tiers — Light $800 (1–2 accounts), Full $1,500 (3–5 accounts), Deep $2,500 (5+ accounts) — set by a free books review, and Keep Current is $400 (up to 100 transactions), $550 (up to 300), or $700+ (300+) per month based on transaction volume. The first consultation is free, and you'll know the exact price before anything starts.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What software do you use?</summary>
+                    <p>QuickBooks — I hold the Intuit Bookkeeping Certification and QuickBooks Certifications (Levels 1 &amp; 2). If you're on something else, we'll talk through it on the free call.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Do you do payroll or file taxes?</summary>
+                    <p>I don't run payroll or file tax returns — I keep your books clean, accurate, and tax-ready so your CPA's job is easy. If you need a CPA, I can point you toward good ones.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Is my financial information safe with you?</summary>
+                    <p>Yes. After ten years safeguarding patient information under HIPAA, confidentiality is a habit, not a policy. Your books stay between us.</p>
+                </details>
             </div>
         </div>
     </section>
@@ -568,18 +951,23 @@
     <section id="contact" class="cta-section">
         <div class="container">
             <h2>Ready to Get Your Books in Order?</h2>
-            <p>Let's talk about your business and find the right solution for your needs.</p>
-            <a href="mailto:contact@clearbookssolutions.com?subject=Bookkeeping Services Inquiry" class="cta-button">Schedule Your Consultation</a>
-            <p style="margin-top: 2rem; font-size: 0.95rem;">Or call: <strong>(XXX) XXX-XXXX</strong></p>
+            <p>Let's talk about your business. The first conversation is free, and I'll give you an honest read on where your books stand. I keep my client roster intentionally small, so every client gets my full attention.</p>
+            <p class="trust-note">🔒 I know handing your financials to a stranger feels risky — after ten years safeguarding patient information under HIPAA, confidentiality is a habit, not a policy.</p>
+            <a href="https://calendly.com/johnnylaim/15-minute-discovery-call" target="_blank" rel="noopener" class="cta-button">Book Your Free Discovery Call</a>
+            <p style="margin-top: 2rem; font-size: 0.95rem;">Or call: <a class="phone-link" href="tel:+12132453549">(213) 245-3549</a></p>
         </div>
     </section>
 
     <!-- Footer -->
+    <div class="brand-band">
+        <img src="logo.jpg" alt="Johnny Laim Bookkeeping — Catch Up, Clean Up, Current">
+    </div>
     <footer>
         <div class="container">
-            <p>&copy; 2026 ClearBooks Solutions. All rights reserved.</p>
-            <p style="font-size: 0.85rem; margin-top: 0.5rem;">Professional Bookkeeping for Small Businesses</p>
+            <p>© 2026 Johnny Laim Bookkeeping. All rights reserved.</p>
+            <p style="font-size: 0.85rem; margin-top: 0.5rem;">Catch Up · Clean Up · Keep Current — Burlingame, CA</p>
         </div>
     </footer>
-</body>
-</html>
+
+
+</body></html>
